@@ -26,6 +26,6 @@ A Advanced and beautiful **To-Do List Web App** that allows users to add, view, 
 - JavaScript (Vanilla)
 - LocalStorage API
 
-👨‍💻 Author
-Pranav Aggarwal
-GitHub
+- 👨‍💻 Author
+- Pranav Aggarwal
+
