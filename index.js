@@ -2,11 +2,7 @@
 const mainToDoElem = document.querySelector(".to-do-list");
 const inputValue =  document.getElementById("inputValue");
 
-
-// Now Adding Click Event:
-
 // Array Creation for local Storage:
-
 const getToDoListFromLocalStorage = () => {
     // convert array into string again!
     return JSON.parse(localStorage.getItem("ToDoList:"));
@@ -21,9 +17,12 @@ const addToDoDynamicElement = (currElem) => {
 
     const divElement = document.createElement("div"); 
     divElement.classList.add("to-do-list-elem");
-    divElement.innerHTML = `<li> ${currElem}</li> <button class="deleteBtn">Delete </button>`;
+    divElement.innerHTML = 
+        `   
+            <li class ="task-item"> ${currElem}</li> 
+            <button class="deleteBtn">Delete </button>             
+        `;
     mainToDoElem.append(divElement);
-
 };
 
 const addToDoList = (e) => {
@@ -48,9 +47,7 @@ const addToDoList = (e) => {
         localStorage.setItem("ToDoList:", JSON.stringify(localToDoLists));
         
         addToDoDynamicElement(toDoListValue); // function is called!
-
     }
-   
 };
 
 //! Even on refreshing the page contents should be there always! unless deleted !
@@ -61,7 +58,6 @@ const showToDoList = () => {
 }; 
 
 showToDoList();     // function is called!
-
 
 const removeToDoList = (e) => {
     
@@ -85,8 +81,6 @@ const removeToDoList = (e) => {
     e.target.parentElement.remove(); // removing the parent element of the delete button.
 };
 
-
-
 mainToDoElem.addEventListener("click", (e)=>{
 
     //* Prevents the default action of the event.
@@ -98,9 +92,14 @@ mainToDoElem.addEventListener("click", (e)=>{
     if(e.target.classList.contains("deleteBtn")){
         removeToDoList(e); // function is called!
     }
+
+    // ✅ NEW: Toggle completed class on li
+    if(e.target.classList.contains("task-item")){
+        // means Checckbox is clicked!
+        e.target.classList.toggle("completed"); // Toggle the "completed" class on the clicked li element.
+    }
+
 });
-
-
 
 
 const addbtn = document.querySelector(".btn");
@@ -108,9 +107,6 @@ addbtn.addEventListener("click", (e) => {
     addToDoList(e);
     //* when dealing with forms ,have to put this "e" inside paramaeter!
 });
-
-
-
 
 
 
