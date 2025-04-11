@@ -1,5 +1,5 @@
 //  Making query Selector:
-const mainToDoElem = document.querySelector(".to-do-list-elem");
+const mainToDoElem = document.querySelector(".to-do-list");
 const inputValue =  document.getElementById("inputValue");
 
 
@@ -34,7 +34,7 @@ const addToDoList = (e) => {
     const toDoListValue = inputValue.value.trim();
     inputValue.value = ""; // Empty the input field after adding the task.
 
-    if(!localToDoLists.includes(toDoListValue)){
+    if( toDoListValue !== "" && !localToDoLists.includes(toDoListValue)){
 
         localToDoLists.push(toDoListValue); 
         
@@ -50,19 +50,7 @@ const addToDoList = (e) => {
         addToDoDynamicElement(toDoListValue); // function is called!
 
     }
-
-    /*
-        // Now we have to add this to the DOM:
-        const divElement = document.createElement("div"); 
-        //! ab iss div me class add krni hai!
-        divElement.classList.add("to-do-list-elem");
-        
-        divElement.innerHTML = `<li> ${inputValue.value} </li>   <button class="deleteBtn">Delete </button>`;
-        
-        //! ab is divElement ko Append krna padega na jis se reflect ho ye:
-        mainToDoElem.append(divElement);
-    */
-    
+   
 };
 
 //! Even on refreshing the page contents should be there always! unless deleted !

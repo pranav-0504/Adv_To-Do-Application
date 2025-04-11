@@ -1,8 +1,22 @@
 body {
+   
+    background: #3F5EFB;
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 20%, rgba(252, 70, 107, 1) 100%);
     
-    background-image: linear-gradient(to right, #20c0b0 0%, #00f2fe 100%);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
 
-    align-items: center;
+}
+
+h1{
+    text-align: center;
+    font-style: italic;
+    color: #270a0a;
+    text-shadow: 2px 2px #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+
 
 }
 
@@ -26,21 +40,30 @@ form{
 }
 
 input[type = "text"] {
+
     width: 200px;
     word-wrap: break-word;
     border-radius: 14px ;
     border: 1px solid #680f0f;
     box-shadow: 0 0 5px #000000;
     margin-right: 10px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px ;
     font-size: 1.2em;
     
     background-color: lab(100% 0.01 -0.01 / 0.863);
 
     cursor: pointer;
+
+    /* padding: 12px 16px;
+    border: none;
+    border-radius: 12px;
+    width: 250px;
+    font-size: 1em;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none; */
 }
 .btn {
-    /* width: 150px; */
+
     word-wrap: break-word;
     border-radius: 14px ;
     border: 1px solid #680f0f;
@@ -55,24 +78,79 @@ input[type = "text"] {
 
 }
 
+.to-do-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start; /* align items to the left */
 
-/*  BY THAPA CODE: 
+    margin-top: 25px ;
+    font-weight: bold;
+
+    font-size: 1.7em;
+    
+    /* padding: 10px 10px 10px 10px; */
+
+}
+
+
+
 .to-do-list-elem {
-    width: 36rem;
-    display: grid;
 
-    grid-template-columns: 1fr 0.3fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: auto;
+    width: 300px; /* set a fixed width for consistent alignment */
 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    
+}
+
+
+.deleteBtn {
+    background-color: #f1e85b;/*softyellowcolor*/
+    color: #000000;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 30px;    /* fully rounded */
+
+    font-size: 0.6em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 5px #888;
+
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    margin-left: 0px;
+    min-width: 80px;
+}
+
+.deleteBtn:hover {
+    background-color: #e7d94d; /* darker yellow on hover */
+    box-shadow: 0 0 8px #aaa;
+    transform: scale(1.05);
+
+}
+
+li {
+    font-size: 1em;
+    margin-right: 20px;
+}
+li:hover {
+    color: #e7d94d; /* soft yellow color on hover */
+    cursor: auto;
+}
+
+
+
+/* .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 } */
-
-
-
-
-
-
-
-
-
-
