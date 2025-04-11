@@ -63,6 +63,46 @@ const showToDoList = () => {
 showToDoList();     // function is called!
 
 
+const removeToDoList = (e) => {
+    
+    const toRemove = e.target.previousElementSibling.innerText; 
+    
+    console.log( "To Delete: "+ toRemove);      // for testing purpose
+    
+    //* Now Local Storage and array me dhundh ke remove krdenge:
+
+    localToDoLists = localToDoLists.filter((currElem) => {
+        return currElem !==  toRemove; // removing the element from the array. 
+    });
+
+    console.log(localToDoLists);    // Array Check Printing
+    
+    //! Now Storing in Local Storage: convert array into string using .stringify
+    localStorage.setItem("ToDoList:", JSON.stringify(localToDoLists));
+
+    // Now Page se bhi to hatana padega!
+    // that is To Remove from the DOM!
+    e.target.parentElement.remove(); // removing the parent element of the delete button.
+};
+
+
+
+mainToDoElem.addEventListener("click", (e)=>{
+
+    //* Prevents the default action of the event.
+    e.preventDefault(); 
+
+    //! console.log(e.target.classList);
+    //! console.log(e.target);
+    
+    if(e.target.classList.contains("deleteBtn")){
+        removeToDoList(e); // function is called!
+    }
+});
+
+
+
+
 const addbtn = document.querySelector(".btn");
 addbtn.addEventListener("click", (e) => {
     addToDoList(e);
