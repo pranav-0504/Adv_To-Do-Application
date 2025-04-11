@@ -1,0 +1,6 @@
+🔮 Future Improvements:
+
+✅ Add edit functionality for tasks--> Imp!
+✅ Add task completion (strike-through) ---> Done Already!
+⏰ Add due date/time feature
+📱 Make the UI more responsive for mobile devices
