@@ -1,0 +1,78 @@
+body {
+    
+    background-image: linear-gradient(to right, #20c0b0 0%, #00f2fe 100%);
+
+    align-items: center;
+
+}
+
+h1 {   
+
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 40px;
+
+}
+
+form{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* margin-top: 1px; */
+    /* margin-bottom: 5px; */
+    
+}
+
+input[type = "text"] {
+    width: 200px;
+    word-wrap: break-word;
+    border-radius: 14px ;
+    border: 1px solid #680f0f;
+    box-shadow: 0 0 5px #000000;
+    margin-right: 10px;
+    padding: 10px 10px 10px 10px;
+    font-size: 1.2em;
+    
+    background-color: lab(100% 0.01 -0.01 / 0.863);
+
+    cursor: pointer;
+}
+.btn {
+    /* width: 150px; */
+    word-wrap: break-word;
+    border-radius: 14px ;
+    border: 1px solid #680f0f;
+    box-shadow: 0 0 5px #000000;
+
+    padding: 10px 10px 10px 10px;
+    font-size: 1.2em;
+
+    cursor: pointer;
+    
+    background-color: #c7cbe0;
+
+}
+
+
+/*  BY THAPA CODE: 
+.to-do-list-elem {
+    width: 36rem;
+    display: grid;
+
+    grid-template-columns: 1fr 0.3fr;
+    align-items: center;
+    height: auto;
+
+} */
+
+
+
+
+
+
+
+
+
+
