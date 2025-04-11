@@ -141,16 +141,3 @@ li:hover {
     color: #e7d94d; /* soft yellow color on hover */
     cursor: auto;
 }
-
-
-
-/* .todo-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.08);
-    padding: 10px 20px;
-    border-radius: 12px;
-    margin: 10px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-} */
